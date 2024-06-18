@@ -2,7 +2,7 @@ FROM openjdk:8 AS java-build
 WORKDIR /usr/src/app
 RUN apt update && apt install maven -y
 COPY ./ /usr/src/app/
-RUN mvn install -DskillTests
+RUN mvn install -DskipTests
 
 FROM openjdk:8
 WORKDIR /usr/src/app/

@@ -1,7 +1,7 @@
 FROM openjdk:11 AS java-build
 WORKDIR /usr/src/app/
 COPY ./ /usr/src/app/
-RUN apt udpate && apt install maven -y
+RUN apt update && apt install maven -y
 RUN mvn install -DskipTests
 
 FROM openjdk:11
